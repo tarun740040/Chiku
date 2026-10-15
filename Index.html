@@ -3,11 +3,278 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Memories</title>
+  <title>Our Memories ❤️</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #141414;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      padding: 0 5%;
+      background: linear-gradient(to bottom, #000, transparent);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #e50914;
+      letter-spacing: -1px;
+    }
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      padding: 100px 5% 60px;
+      background:
+        linear-gradient(to right, #141414 5%, rgba(20,20,20,.75) 40%, rgba(20,20,20,.2)),
+        linear-gradient(to top, #141414 2%, transparent 30%),
+        url("image.jpg") center/cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      margin-bottom: 18px;
+      line-height: 1;
+    }
+
+    .hero p {
+      font-size: 20px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    button {
+      border: none;
+      padding: 13px 24px;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .play {
+      background: white;
+      color: black;
+    }
+
+    .more {
+      background: rgba(109,109,110,.7);
+      color: white;
+    }
+
+    .section {
+      padding: 25px 5%;
+    }
+
+    .section h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .row {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding-bottom: 15px;
+      scrollbar-width: none;
+    }
+
+    .row::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card {
+      min-width: 210px;
+      height: 125px;
+      border-radius: 5px;
+      overflow: hidden;
+      position: relative;
+      background: #222;
+      cursor: pointer;
+      transition: transform .25s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.08);
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 35px 10px 10px;
+      background: linear-gradient(transparent, rgba(0,0,0,.9));
+      font-weight: bold;
+    }
+
+    .message {
+      text-align: center;
+      padding: 70px 20px;
+      background: #181818;
+    }
+
+    .message h2 {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .message p {
+      max-width: 650px;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #ddd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        min-width: 160px;
+        height: 100px;
+      }
+
+      .hero {
+        min-height: 65vh;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Our Memories ❤️</h1>
-  <p>A little place made just for you.</p>
-  <button>Open Gallery</button>
+
+  <header>
+    <div class="logo">OUR STORY</div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>I'm Sorry ❤️</h1>
+      <p>
+        I made this little place just for you.
+        Because some things are better said with memories.
+      </p>
+
+      <div class="buttons">
+        <button class="play" onclick="document.getElementById('memories').scrollIntoView({behavior:'smooth'})">
+          ▶ Play
+        </button>
+
+        <button class="more" onclick="document.getElementById('message').scrollIntoView({behavior:'smooth'})">
+          ⓘ More Info
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="memories">
+    <h2>Our Memories ❤️</h2>
+
+    <div class="row">
+
+      <div class="card">
+        <img src="image.jpg" alt="Our Memory">
+        <div class="card-title">Our First Memory</div>
+      </div>
+
+      <div class="card">
+        <img src="image.jpg" alt="Our Memory">
+        <div class="card-title">Best Moments</div>
+      </div>
+
+      <div class="card">
+        <img src="image.jpg" alt="Our Memory">
+        <div class="card-title">Just Us</div>
+      </div>
+
+      <div class="card">
+        <img src="image.jpg" alt="Our Memory">
+        <div class="card-title">Forever Memories</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Because You're Special ✨</h2>
+
+    <div class="row">
+
+      <div class="card">
+        <img src="image.jpg" alt="Memory">
+        <div class="card-title">You & Me</div>
+      </div>
+
+      <div class="card">
+        <img src="image.jpg" alt="Memory">
+        <div class="card-title">Our Little World</div>
+      </div>
+
+      <div class="card">
+        <img src="image.jpg" alt="Memory">
+        <div class="card-title">Happy Times</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="message" id="message">
+    <h2>One Last Thing ❤️</h2>
+
+    <p>
+      I'm sorry for everything.
+      I don't want one bad moment to become bigger than
+      all the beautiful moments we've shared.
+      You mean more to me than I can explain.
+      So... can we start again? ❤️
+    </p>
+  </section>
+
+  <footer>
+    Made with ❤️ just for you
+  </footer>
+
 </body>
 </html>
